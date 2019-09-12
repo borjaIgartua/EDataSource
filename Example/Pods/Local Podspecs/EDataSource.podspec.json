@@ -1,0 +1,22 @@
+{
+  "name": "EDataSource",
+  "version": "0.1.0",
+  "summary": "A short description of EDataSource.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/borjaigartua/EDataSource",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "borjaigartua": "borjaigartua@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/borjaigartua/EDataSource.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "EDataSource/Classes/**/*"
+}

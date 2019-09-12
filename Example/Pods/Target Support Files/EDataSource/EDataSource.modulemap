@@ -1,0 +1,6 @@
+framework module EDataSource {
+  umbrella header "EDataSource-umbrella.h"
+
+  export *
+  module * { export * }
+}
