@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'EDataSource_Example' do
+  pod 'EDataSource', :path => '../'
+
+  target 'EDataSource_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
