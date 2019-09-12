@@ -3,6 +3,8 @@ use_frameworks!
 target 'EDataSource_Example' do
   pod 'EDataSource', :path => '../'
 
+  pod 'Reusable', '~> 4.1.0'
+
   target 'EDataSource_Tests' do
     inherit! :search_paths
 

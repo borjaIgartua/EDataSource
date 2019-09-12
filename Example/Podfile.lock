@@ -1,8 +1,18 @@
 PODS:
   - EDataSource (1.0.0)
+  - Reusable (4.1.0):
+    - Reusable/Storyboard (= 4.1.0)
+    - Reusable/View (= 4.1.0)
+  - Reusable/Storyboard (4.1.0)
+  - Reusable/View (4.1.0)
 
 DEPENDENCIES:
   - EDataSource (from `../`)
+  - Reusable (~> 4.1.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Reusable
 
 EXTERNAL SOURCES:
   EDataSource:
@@ -10,7 +20,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   EDataSource: 707b31a257e9b29054498e0c40bccb6d67e26e78
+  Reusable: 82be188f29d96dc5eff0db7b2393bcc08d2cdd5b
 
-PODFILE CHECKSUM: ae229547cbad7a977448f9c3829c091cebbd5c34
+PODFILE CHECKSUM: 4a00a1b8a84282d2da1a00b88ae7b3a33ad05920
 
 COCOAPODS: 1.7.5

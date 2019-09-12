@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
-		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
+		001CB2A7232AA3D000DA04FE /* CustomDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001CB29C232AA3D000DA04FE /* CustomDataSource.swift */; };
+		001CB2A8232AA3D000DA04FE /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001CB29E232AA3D000DA04FE /* CustomCell.swift */; };
+		001CB2A9232AA3D000DA04FE /* FromNibCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001CB29F232AA3D000DA04FE /* FromNibCell.swift */; };
+		001CB2AA232AA3D000DA04FE /* FromNibCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 001CB2A0232AA3D000DA04FE /* FromNibCell.xib */; };
+		001CB2AB232AA3D000DA04FE /* CustomBigCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001CB2A1232AA3D000DA04FE /* CustomBigCell.swift */; };
+		001CB2AC232AA3D000DA04FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001CB2A3232AA3D000DA04FE /* ViewController.swift */; };
+		001CB2AD232AA3D000DA04FE /* String+CellItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001CB2A5232AA3D000DA04FE /* String+CellItemProtocol.swift */; };
+		001CB2AE232AA3D000DA04FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001CB2A6232AA3D000DA04FE /* AppDelegate.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
@@ -28,13 +34,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		001CB29C232AA3D000DA04FE /* CustomDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomDataSource.swift; sourceTree = "<group>"; };
+		001CB29E232AA3D000DA04FE /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		001CB29F232AA3D000DA04FE /* FromNibCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FromNibCell.swift; sourceTree = "<group>"; };
+		001CB2A0232AA3D000DA04FE /* FromNibCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FromNibCell.xib; sourceTree = "<group>"; };
+		001CB2A1232AA3D000DA04FE /* CustomBigCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomBigCell.swift; sourceTree = "<group>"; };
+		001CB2A3232AA3D000DA04FE /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		001CB2A5232AA3D000DA04FE /* String+CellItemProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+CellItemProtocol.swift"; sourceTree = "<group>"; };
+		001CB2A6232AA3D000DA04FE /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F0021FA7861EE00AD5DE45A /* Pods-EDataSource_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EDataSource_Example.debug.xcconfig"; path = "Target Support Files/Pods-EDataSource_Example/Pods-EDataSource_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		2E09B71F86390442636982FE /* Pods-EDataSource_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EDataSource_Tests.debug.xcconfig"; path = "Target Support Files/Pods-EDataSource_Tests/Pods-EDataSource_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		3645744B7104293391017741 /* Pods-EDataSource_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EDataSource_Example.release.xcconfig"; path = "Target Support Files/Pods-EDataSource_Example/Pods-EDataSource_Example.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* EDataSource_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EDataSource_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -69,6 +81,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		001CB29A232AA3D000DA04FE /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				001CB2A6232AA3D000DA04FE /* AppDelegate.swift */,
+				001CB29B232AA3D000DA04FE /* DataSource */,
+				001CB29D232AA3D000DA04FE /* Cells */,
+				001CB2A2232AA3D000DA04FE /* ViewControllers */,
+				001CB2A4232AA3D000DA04FE /* Model */,
+			);
+			path = Code;
+			sourceTree = "<group>";
+		};
+		001CB29B232AA3D000DA04FE /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				001CB29C232AA3D000DA04FE /* CustomDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		001CB29D232AA3D000DA04FE /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				001CB29E232AA3D000DA04FE /* CustomCell.swift */,
+				001CB29F232AA3D000DA04FE /* FromNibCell.swift */,
+				001CB2A0232AA3D000DA04FE /* FromNibCell.xib */,
+				001CB2A1232AA3D000DA04FE /* CustomBigCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		001CB2A2232AA3D000DA04FE /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				001CB2A3232AA3D000DA04FE /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		001CB2A4232AA3D000DA04FE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				001CB2A5232AA3D000DA04FE /* String+CellItemProtocol.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
@@ -93,8 +152,7 @@
 		607FACD21AFB9204008FA782 /* Example for EDataSource */ = {
 			isa = PBXGroup;
 			children = (
-				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				001CB29A232AA3D000DA04FE /* Code */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -247,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				001CB2AA232AA3D000DA04FE /* FromNibCell.xib in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
@@ -292,10 +351,12 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-EDataSource_Example/Pods-EDataSource_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/EDataSource/EDataSource.framework",
+				"${BUILT_PRODUCTS_DIR}/Reusable/Reusable.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EDataSource.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reusable.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -331,8 +392,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
-				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				001CB2AE232AA3D000DA04FE /* AppDelegate.swift in Sources */,
+				001CB2AC232AA3D000DA04FE /* ViewController.swift in Sources */,
+				001CB2AB232AA3D000DA04FE /* CustomBigCell.swift in Sources */,
+				001CB2AD232AA3D000DA04FE /* String+CellItemProtocol.swift in Sources */,
+				001CB2A9232AA3D000DA04FE /* FromNibCell.swift in Sources */,
+				001CB2A8232AA3D000DA04FE /* CustomCell.swift in Sources */,
+				001CB2A7232AA3D000DA04FE /* CustomDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
