@@ -1,5 +1,5 @@
 PODS:
-  - EDataSource (0.1.0)
+  - EDataSource (1.0.0)
 
 DEPENDENCIES:
   - EDataSource (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  EDataSource: 6356630a6f14bdb07550dec78401e50f671aa599
+  EDataSource: 707b31a257e9b29054498e0c40bccb6d67e26e78
 
 PODFILE CHECKSUM: ae229547cbad7a977448f9c3829c091cebbd5c34
 
