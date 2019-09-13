@@ -1,5 +1,5 @@
 //
-//  DefaultDataSource.swift
+//  DefaultTableDataSourceProtocol.swift
 //
 //  Copyright © 2019 Borja Igartua.
 //
@@ -22,9 +22,9 @@
 //  THE SOFTWARE.
 //
 
-import Foundation
+import UIKit
 
-extension DataSourceProtocol {
+extension TableDataSourceProtocol {
     
     public func updateDataSource(_ source: [CellItemProtocol]) {
         self.source = source
@@ -43,10 +43,10 @@ extension DataSourceProtocol {
             self.tableView?.insertRows(at: indexPaths, with: animation)
             return
         }
-        
+
         let indexes = indexPaths.map { $0.row }
         var insertingItems = items
-        
+
         indexes.forEach { self.source.insert(insertingItems.removeFirst(), at: $0)}
         self.tableView?.insertRows(at: indexPaths, with: animation)
     }
@@ -54,7 +54,7 @@ extension DataSourceProtocol {
     public func deleteItems(at indexPaths: [IndexPath], animation: UITableView.RowAnimation) {
         let indexes = Set(indexPaths.map { $0.row })
         let newSource = self.source.enumerated().filter { !indexes.contains($0.offset)  }
-        
+
         self.source = newSource.map { $0.element }
         self.tableView?.deleteRows(at: indexPaths, with: animation)
     }
@@ -63,7 +63,7 @@ extension DataSourceProtocol {
         let indexes = indexPaths.map { $0.row }
         var updating = items
         indexes.forEach { self.source[$0] = updating.removeFirst() }
-        
+
         self.tableView?.reloadRows(at: indexPaths, with: animation)
     }
 }

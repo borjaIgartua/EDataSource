@@ -24,16 +24,10 @@
 
 import UIKit
 
-public typealias RegisteredCell = UITableViewCell & DrawerProtocol
-
-/// DataSource protocol, implement to fill the cells
+/// DataSource protocol
 ///
-public protocol DataSourceProtocol: UITableViewDataSource {
+public protocol DataSourceProtocol {
     var source: [CellItemProtocol] { get set }
-    var tableView: UITableView? { get set }
-
-    init(tableView: UITableView?,
-         source: [CellItemProtocol]?)
     
     /// Update the source and reloadData for the table
     ///

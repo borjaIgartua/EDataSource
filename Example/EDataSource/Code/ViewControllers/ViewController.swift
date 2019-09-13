@@ -41,6 +41,7 @@ class ViewController: UIViewController {
         
         self.navigationItem.setRightBarButtonItems([add, remove, update, get], animated: false)
         
+        dataSource = TableDataSource(tableView: tableView, source: ["", ""])
         dataSource = CustomDataSource(tableView: tableView, source: ["one", "two", "three", "caramba!"])
     }
     
