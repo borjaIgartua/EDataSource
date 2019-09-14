@@ -12,7 +12,7 @@
 [CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate Alamofire into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
-pod 'EDataSource', '~> 1.0.0'
+pod 'EDataSource', '~> 1.1.0'
 ```
 
 ## Structure
