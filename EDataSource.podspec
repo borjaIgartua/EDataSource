@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'EDataSource'
-  s.version          = '1.1.0'
+  s.version          = '1.1.1'
   s.summary          = 'Helper classes to manage your UI data sources'
 
 # This description is used to generate tags and improve search results.
