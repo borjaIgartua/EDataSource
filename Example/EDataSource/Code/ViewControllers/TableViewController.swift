@@ -25,7 +25,7 @@
 import UIKit
 import EDataSource
 
-class ViewController: UIViewController {
+class TableViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -38,10 +38,9 @@ class ViewController: UIViewController {
         let remove = UIBarButtonItem(title: "remove", style: .plain, target: self, action: #selector(removing))
         let update = UIBarButtonItem(title: "update", style: .plain, target: self, action: #selector(updating))
         let get = UIBarButtonItem(title: "get", style: .plain, target: self, action: #selector(getting))
-        
         self.navigationItem.setRightBarButtonItems([add, remove, update, get], animated: false)
         
-        dataSource = CustomDataSource(tableView: tableView, source: ["one", "two", "three", "caramba!"])
+        dataSource = CustomTableDataSource(tableView: tableView, source: ["one", "two", "three", "caramba!"])
     }
     
     //MARK: - Utils
@@ -64,6 +63,5 @@ class ViewController: UIViewController {
     @objc func getting() {
         print(self.dataSource.get(indexPath: IndexPath(row: 1, section: 0)) ?? "")
     }
-    
 }
 

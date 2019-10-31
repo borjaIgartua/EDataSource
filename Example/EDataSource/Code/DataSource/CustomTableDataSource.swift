@@ -1,5 +1,5 @@
 //
-//  CustomBigCell.swift
+//  CustomTableDataSource.swift
 //
 //  Copyright © 2019 Borja Igartua.
 //
@@ -25,14 +25,13 @@
 import EDataSource
 import Reusable
 
-class CustomBigCell:  RegisteredTableCell, Reusable {
-    func fill(withItem item: CellItemProtocol) {
-        guard let item = item as? String else {
-            return
-        }
-        
-        print("filling CustomBigCell")
-        
-        self.textLabel?.text = item
+class CustomTableDataSource: TableDataSource {
+    
+    required init(tableView: UITableView?, source: [CellItemProtocol]?) {
+        tableView?.register(cellType: CustomCell.self)
+        tableView?.register(cellType: CustomBigCell.self)
+        tableView?.register(cellType: FromNibCell.self)                
+        super.init(tableView: tableView, source: source)
     }
 }
+

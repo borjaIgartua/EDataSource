@@ -1,5 +1,5 @@
 //
-//  CustomBigCell.swift
+//  CollectionDataSourceProtocol.swift
 //
 //  Copyright © 2019 Borja Igartua.
 //
@@ -22,17 +22,16 @@
 //  THE SOFTWARE.
 //
 
-import EDataSource
-import Reusable
+import UIKit
 
-class CustomBigCell:  RegisteredTableCell, Reusable {
-    func fill(withItem item: CellItemProtocol) {
-        guard let item = item as? String else {
-            return
-        }
-        
-        print("filling CustomBigCell")
-        
-        self.textLabel?.text = item
-    }
+public typealias RegisteredCollectionCell = UICollectionViewCell & DrawerProtocol
+
+/// CollectionDataSourceProtocol protocol
+///
+public protocol CollectionDataSourceProtocol: DataSourceProtocol, UICollectionViewDataSource {
+    var source: [CellItemProtocol] { get set }
+    var collectionView: UICollectionView? { get set }
+
+    init(collectionView: UICollectionView?,
+         source: [CellItemProtocol]?)
 }

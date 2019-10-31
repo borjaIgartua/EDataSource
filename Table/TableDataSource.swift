@@ -1,5 +1,5 @@
 //
-//  TableDataSourceProtocol.swift
+//  DataSource.swift
 //
 //  Copyright © 2019 Borja Igartua.
 //
@@ -24,14 +24,36 @@
 
 import UIKit
 
-public typealias RegisteredCell = UITableViewCell & DrawerProtocol
-
-/// TableDataSourceProtocol protocol
-///
-public protocol TableDataSourceProtocol: DataSourceProtocol, UITableViewDataSource {
-    var source: [CellItemProtocol] { get set }
-    var tableView: UITableView? { get set }
-
-    init(tableView: UITableView?,
-         source: [CellItemProtocol]?)
+open class TableDataSource: NSObject, TableDataSourceProtocol {
+    public var source: [CellItemProtocol]
+    public weak var tableView: UITableView?
+    
+    public required init(tableView: UITableView?,
+                         source: [CellItemProtocol]? = nil) {
+        
+        self.tableView = tableView
+        self.source = source ?? []
+        super.init()
+                
+        self.tableView?.dataSource = self
+        if source != nil {
+            self.tableView?.reloadData()
+        }
+    }
+    
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let item = source[indexPath.row]
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: item.reuserIdentifier, for: indexPath) as? RegisteredTableCell else {
+            fatalError("All the cell inside table view should implement DrawerProtocol")
+        }
+        
+        cell.fill(withItem: item)
+        return cell
+    }
+    
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.source.count
+    }
 }

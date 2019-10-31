@@ -25,7 +25,7 @@
 import EDataSource
 import Reusable
 
-class CustomCell : RegisteredCell, Reusable {
+class CustomCell : RegisteredTableCell, Reusable {
     
     func fill(withItem item: CellItemProtocol) {
         guard let item = item as? String else {

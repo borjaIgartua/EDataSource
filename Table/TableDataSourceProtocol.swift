@@ -1,5 +1,5 @@
 //
-//  CustomDataSource.swift
+//  TableDataSourceProtocol.swift
 //
 //  Copyright © 2019 Borja Igartua.
 //
@@ -22,16 +22,16 @@
 //  THE SOFTWARE.
 //
 
-import EDataSource
-import Reusable
+import UIKit
 
-class CustomDataSource: TableDataSource {
-    
-    required init(tableView: UITableView?, source: [CellItemProtocol]?) {
-        tableView?.register(cellType: CustomCell.self)
-        tableView?.register(cellType: CustomBigCell.self)
-        tableView?.register(cellType: FromNibCell.self)                
-        super.init(tableView: tableView, source: source)
-    }
+public typealias RegisteredTableCell = UITableViewCell & DrawerProtocol
+
+/// TableDataSourceProtocol protocol
+///
+public protocol TableDataSourceProtocol: DataSourceProtocol, UITableViewDataSource {
+    var source: [CellItemProtocol] { get set }
+    var tableView: UITableView? { get set }
+
+    init(tableView: UITableView?,
+         source: [CellItemProtocol]?)
 }
-
