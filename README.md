@@ -75,10 +75,10 @@ class CustomCell : UITableViewCell, DrawerProtocol {
     }
 }
 ```
-Or you can use the typealias `RegisteredCell`.
+Or you can use the typealias `RegisteredTableCell`.
 
 ```swift
-class CustomCell : RegisteredCell {
+class CustomCell : RegisteredTableCell {
 
     func fill(withItem item: CellItemProtocol) {
         guard let item = item as? MyItem else {
@@ -140,6 +140,15 @@ class CustomTableDataSource: TableViewDataSourceProtocol {
 class CustomDataSource: DataSourceProtocol {
 }
 ```
+
+### UICollectionView
+
+EDataSource supports collection views on the same way, implement in your `UICollectionViewCells` the `DrawerProtocol` and on your items `CellItemProtocol`. You can choose between implement your data source with the `CollectionDataSourceProtocol` directly on `DataSourceProtocol` or use/inherit from `CollectionDataSource`.
+
+### TODO
+
+- [ ] Implement animations for insert/remove on `CollectionDataSource`
+
 ### Example
 
 To run the example project, clone the repo, and run `pod install`  from the Example directory first.
