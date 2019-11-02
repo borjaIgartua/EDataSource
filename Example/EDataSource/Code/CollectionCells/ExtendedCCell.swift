@@ -1,5 +1,5 @@
 //
-//  TableDataSourceProtocol.swift
+//  ExtendedCCell.swift
 //
 //  Copyright © 2019 Borja Igartua.
 //
@@ -21,17 +21,26 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 //
+import EDataSource
+import Reusable
 
-import UIKit
-
-public typealias RegisteredTableCell = UITableViewCell & DrawerProtocol
-
-/// TableDataSourceProtocol protocol
-///
-public protocol TableDataSourceProtocol: DataSourceProtocol, UITableViewDataSource {
-    var source: [CellItemProtocol] { get set }
-    var tableView: UITableView? { get set }
-
-    init(tableView: UITableView?,
-         source: [CellItemProtocol]?)        
+class ExtendedCCell: UICollectionViewCell, DrawerProtocol, NibReusable {
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var subtitleLabel: UILabel!
+    @IBOutlet weak var footerLabel: UILabel!
+    
+    @IBOutlet weak var containerView: UIView!
+    
+    func fill(withItem item: CellItemProtocol) {
+        guard let item = item as? Int else {
+            return
+        }
+        
+        print("filling ExtendedCCell")
+        self.containerView.backgroundColor = .lightGray
+        self.containerView.layer.cornerRadius = 4
+        titleLabel.text = "🐽:"
+        subtitleLabel.text = String(item)
+        footerLabel.text = "👯‍♂️ 👯‍♀️"
+    }
 }

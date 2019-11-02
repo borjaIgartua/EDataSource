@@ -25,7 +25,7 @@
 import EDataSource
 import Reusable
 
-class FromNibCell: RegisteredTableCell, Reusable, NibLoadable {
+class FromNibCell: RegisteredTableCell, NibReusable {
     
     @IBOutlet weak var bulletLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!

@@ -1,5 +1,5 @@
 //
-//  TableDataSourceProtocol.swift
+//  LightCCell.swift
 //
 //  Copyright © 2019 Borja Igartua.
 //
@@ -22,16 +22,21 @@
 //  THE SOFTWARE.
 //
 
-import UIKit
+import EDataSource
+import Reusable
 
-public typealias RegisteredTableCell = UITableViewCell & DrawerProtocol
-
-/// TableDataSourceProtocol protocol
-///
-public protocol TableDataSourceProtocol: DataSourceProtocol, UITableViewDataSource {
-    var source: [CellItemProtocol] { get set }
-    var tableView: UITableView? { get set }
-
-    init(tableView: UITableView?,
-         source: [CellItemProtocol]?)        
+class LightCCell: UICollectionViewCell, DrawerProtocol, NibReusable {
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var containerView: UIView!
+    
+    func fill(withItem item: CellItemProtocol) {
+        guard let item = item as? Int else {
+            return
+        }
+        
+        print("filling LightCCell")
+        self.containerView.backgroundColor = .lightGray
+        self.containerView.layer.cornerRadius = 4
+        titleLabel.text = String(item)
+    }
 }
